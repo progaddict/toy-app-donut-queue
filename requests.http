@@ -1,0 +1,32 @@
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+##################################################
+# get all orders
+
+GET http://127.0.0.1:8080/api/v1/order
+
+##################################################
+# get an order
+
+GET http://127.0.0.1:8080/api/v1/order/2
+
+##################################################
+# get orders for next delivery
+
+GET http://127.0.0.1:8080/api/v1/order/next-delivery
+
+##################################################
+# place an new order
+
+POST http://127.0.0.1:8080/api/v1/order
+Content-Type: application/json
+
+{
+    "customerId": 100,
+    "quantity": 10
+}
+
+##################################################
+# delete an new order
+
+DELETE http://127.0.0.1:8080/api/v1/order/100
